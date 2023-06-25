@@ -6,9 +6,9 @@ func main() {
 	//this is a slice, and all data types in the slice must be the same.
 	cards := newDeck()
 
-	cards.printDeck()
-}
+	// first return value assigned to hand; second return value assigned to remainingCards
+	hand, remainingCards := deal(cards, 5)
 
-func newCard() string {
-	return "Five of Diamonds"
+	hand.printDeck()
+	remainingCards.printDeck()
 }
